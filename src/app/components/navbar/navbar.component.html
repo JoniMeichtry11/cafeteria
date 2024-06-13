@@ -1,0 +1,49 @@
+<header
+  class="p-12 bg-[#FCF8EB]"
+  [ngClass]="{ 'fix-header': showSlidingPanel }"
+>
+  <nav class="flex items-center h-24">
+    <div>
+      <img
+        elementtiming="nbf-header-logo-desktop"
+        src="//images.squarespace-cdn.com/content/v1/6514620a6a73b76f055e87a7/6b87cd92-01ce-4568-af84-e7699ed0df31/Khepri__Primary_FullColor.png?format=1500w"
+        alt="Khepri, Coffee + Scratch Kitchen"
+        style="display: block"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+        data-loader="raw"
+        class="w-56"
+      />
+    </div>
+    <div class="ms-auto navItems">
+      <ul class="flex gap-8 cursor-pointer">
+        <li>About</li>
+        <li>Menu</li>
+        <li>Events</li>
+        <li>Order</li>
+      </ul>
+    </div>
+    <div class="hamburger ms-auto" (click)="toggleSlidingPanel()">
+      <span
+        [ngClass]="{
+          'icon-[radix-icons--hamburger-menu]': !showSlidingPanel,
+          'icon-[ph--x-light]': showSlidingPanel
+        }"
+        class="icon-[radix-icons--hamburger-menu]"
+        role="img"
+        aria-hidden="true"
+      ></span>
+    </div>
+    @if(showSlidingPanel){
+    <div class="container-sliding">
+      <ul class="flex flex-col gap-16 cursor-pointer text-4xl text-center">
+        <li>About</li>
+        <li>Menu</li>
+        <li>Events</li>
+        <li>Order</li>
+      </ul>
+    </div>
+    }
+  </nav>
+</header>

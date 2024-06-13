@@ -1,0 +1,20 @@
+/* footer.component.css */
+.wave {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  background-color: #C38559;
+  padding-top: 20px;
+  color: #ffffff;
+}
